@@ -1,25 +1,42 @@
-DialoGPT Chatbot
-This is a simple chatbot based on the DialoGPT language model using the Hugging Face Transformers library. This chatbot can generate conversational responses to user inputs in natural language.
+# DialoGPT Chatbot
 
-Author
-This code was written by Sean Pepper.
+This is a Python implementation of a chatbot based on the [DialoGPT](https://github.com/microsoft/DialoGPT) model, using the Hugging Face [Transformers](https://github.com/huggingface/transformers) library. 
 
-Requirements
-To run this chatbot, you will need to install the following:
+## Requirements
 
-Python 3.6 or higher
-PyTorch 1.0 or higher
-Transformers library by Hugging Face (pip install transformers)
-Usage
-To start the chatbot, run the chatbot.py script. The chatbot will greet the user and prompt for input. Type in your message and hit enter to receive a response.
+* Python 3.6 or higher
+* PyTorch 1.6.0 or higher
+* Transformers 4.0.0 or higher
 
-To stop the chatbot, type "quit" and hit enter.
+## Usage
 
-Customization
-You can customize the chatbot's behavior by modifying the following parameters in the chatbot.py script:
+1. Clone this repository: `git clone https://github.com/seanpepper/dialoGPT-chatbot.git`
+2. Install the required packages: `pip install -r requirements.txt`
+3. Run the chatbot: `python chatbot.py`
 
-model_name: The name of the pre-trained DialoGPT model to use. You can find a list of available models on the Hugging Face website.
-max_length: The maximum number of tokens to generate for each response.
-no_repeat_ngram_size: The size of n-grams to avoid repeating in the generated response.
-License
-This code is released under the MIT License. Feel free to use and modify this code for your own projects.
+When you run the chatbot, it will greet you with a welcome message and prompt you for input. You can type anything you want and the chatbot will respond based on the DialoGPT model's training data.
+
+You can exit the chatbot by typing "quit" as your input.
+
+## Customization
+
+If you want to modify the behavior of the chatbot, you can adjust the parameters in the `chatbot.py` file:
+
+* `model_name`: the name of the DialoGPT model to use, e.g. 'microsoft/DialoGPT-large'.
+* `max_length`: the maximum length (in tokens) of the chatbot's responses.
+* `no_repeat_ngram_size`: the number of tokens in a row that the chatbot's responses should avoid repeating.
+* `device`: the device (e.g. 'cpu', 'cuda') to use for running the model.
+
+You can experiment with different values for these parameters to see how they affect the chatbot's behavior.
+
+## Acknowledgments
+
+This chatbot implementation is based on the following resources:
+
+* [Transformers documentation](https://huggingface.co/transformers/)
+* [DialoGPT paper](https://arxiv.org/abs/1911.00536)
+* [Hugging Face DialoGPT example](https://github.com/huggingface/transformers/blob/master/examples/conversational/DialoGPT.py)
+
+## Author
+
+This implementation was created by Sean Pepper.
